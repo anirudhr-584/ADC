@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anirudh Rajesh | Portfolio</title>
+    <style>
+        @font-face {
+            font-family: 'ITC Avant Garde Gothic';
+            src: url('ITCAvantGardeStd-Bk.ttf') format('truetype');
+            font-weight: 100 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('https://fonts.gstatic.com/s/playfairdisplay/v28/nuFvD-vYSZviVYUb_rj3ij__anPXPTldH1jvweKJCvFuVJXKewk.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: 'ITC Avant Garde Gothic', sans-serif;
+            background: url('patternbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(26, 0, 34, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            font-size: 1.2rem;
+            color: white;
+            margin-left: 30px;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin-right: 30px;
+        }
+
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 200;
+            transition: color 0.3s ease;
+        }
+
+        .navbar nav ul li a:hover {
+            color: #d6b4f0;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0 120px;
+            width: 100%;
+        }
+
+        .intro-right {
+            text-align: right;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .intro-right h2 {
+            font-size: 8rem;
+            font-weight: normal;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .intro-right p {
+            font-size: 2.2rem;
+            line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .intro-right span {
+            font-weight: normal;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .intro-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .intro-left .tagline {
+            font-size: 1.4rem;
+            color: #a5a5a5;
+            margin-bottom: 20px;
+            font-weight: 100;
+            font-family: 'ITC Avant Garde Gothic', sans-serif;
+        }
+
+        .intro-left h3 {
+            font-size: 4.5rem;
+            font-weight: 300;
+            font-family: 'ITC Avant Garde Gothic', sans-serif;
+        }
+
+        .intro-left h3 .personal {
+            font-family: 'ITC Avant Garde Gothic', sans-serif;
+            font-weight: 100;
+        }
+
+        .intro-left h3 .portfolio {
+            font-family: 'Playfair Display', serif;
+            font-weight: normal;
+            display: block;
+            margin-top: -20px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 100px 100px;
+            display: none;
+        }
+
+        .image-container {
+            width: 40%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-preview {
+            width: 50%;
+        }
+
+        .skills-preview h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .skills-preview .skills-list {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .skills-preview ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .skills-preview ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color: gray;
+            font-size: 0.9rem;
+            padding: 20px 0;
+            background-color: rgba(26, 0, 34, 0.8);
+            font-family: 'ITCAvantGardeStd-Bk.ttf', sans-serif;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 40px;
+            }
+
+            .intro-right {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .intro-left {
+                align-items: center;
+            }
+
+            .intro-left h3 {
+                font-size: 3rem;
+            }
+
+            .intro-left .tagline {
+                font-size: 1.2rem;
+            }
+
+            .intro-right h2 {
+                font-size: 5rem;
+            }
+
+            .intro-right p {
+                font-size: 1.5rem;
+            }
+
+            .skills-container {
+                flex-direction: column;
+                padding: 50px 20px;
+            }
+
+            .image-container {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .skills-preview {
+                width: 100%;
+            }
+
+            .skills-preview .skills-list {
+                flex-direction: column;
+            }
+
+            .navbar h1 {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .intro-left h3 {
+                font-size: 2.5rem;
+            }
+
+            .intro-left .tagline {
+                font-size: 1rem;
+            }
+
+            .intro-right h2 {
+                font-size: 3rem;
+            }
+
+            .intro-right p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Anirudh Rajesh</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showHome()">Home</a></li>
+                    <li><a href="#" onclick="showSkills()">My Skills</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro" id="home">
+        <div class="intro-right">
+            <h2>Hello!</h2>
+            <p>
+                I am<br>
+                <span>Anirudh</span>,<br>
+                a creative interaction<br>
+                and graphic designer.
+            </p>
+        </div>
+
+        <div class="intro-left">
+            <p class="tagline">Designing with streamlined ideas,<br> without doing too much.</p>
+            <h3>
+                <span class="personal">personal</span><br>
+                <span class="portfolio">portfolio.</span>
+            </h3>
+        </div>
+    </section>
+
+    <section class="skills-container" id="skills">
+        <div class="image-container">
+            <img src="AnirudhR_Resume.jpg" alt="My skills image">
+        </div>
+
+        <div class="skills-preview">
+            <h2>A small preview of my skills</h2>
+            <div class="skills-list">
+                <ul>
+                    <li>Creativity</li>
+                    <li>Innovation</li>
+                    <li>Minimalism</li>
+                    <li>Teamwork</li>
+                    <li>Figma</li>
+                    <li>Illustrator</li>
+                    <li>Photoshop</li>
+                    <li>After Effects</li>
+                    <li>Presentations</li>
+                </ul>
+
+                <ul>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                    <li>UI Design</li>
+                    <li>UX Design</li>
+                    <li>Web Design</li>
+                    <li>Branding</li>
+                    <li>Typography</li>
+                    <li>Visual Design</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Anirudh Rajesh</p>
+    </footer>
+
+    <script>
+        function showHome() {
+            document.getElementById('home').style.display = 'flex';
+            document.getElementById('skills').style.display = 'none';
+        }
+
+        function showSkills() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('skills').style.display = 'flex';
+        }
+
+        window.onload = function() {
+            showHome();
+        };
+    </script>
+</body>
+</html>
